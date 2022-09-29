@@ -2,35 +2,46 @@
 using namespace std;
 int main()
 {
-    int x,y,found=0;
-    cout<<"Enter the size of Array1: ";
-    cin>>x;
+    int found,k=0,x;
+    int arr1[10];
+    int arr2[10];
+    int arr[50];
 
-    int arr1[x];
-    cout<<"\nInput "<<x<<" Elements into Array1: ";
-    for(int i=0; i<x; i++)
+    cout<<"\nInput 10 Elements into Array1: ";
+    for(int i=0; i<10; i++)
         cin>>arr1[i];
 
-    cout<<"\nEnter the size of Array2: ";
-    cin>>y;
-
-    int arr2[y];
-    cout<<"\nInput "<<y<<" Elements into Array2: ";
-    for(int i=0; i<y; i++)
+    cout<<"\nInput 10 Elements into Array2: ";
+    for(int i=0; i<10; i++)
         cin>>arr2[i];
 
-    cout<<"\nCommon Elements: ";
-    for(int i=0,j=0; i<x,j<y; i++,j++)
+    for(int i=0; i<10; i++)
     {
-        if(arr1[i]==arr2[j])
+        for(int j=0;j<10;j++)
         {
-            cout<<arr1[i]<<"  ";
-            found++;
+            if(arr1[i]==arr2[j])
+            {
+                found = 0;
+                for(x=0; x<k; x++)
+                {
+                    if(arr1[i]==arr[x])
+                        found++;
+                }
+
+                if(found==0)
+                {
+                    arr[k] = arr1[i];
+                    k++;
+                }
+            }
         }
     }
-    if(found==0)
-        cout<<"\nNo Common Elements Found!";
+    cout<<k<<" Common Elements: ";
+    for(int i=0; i<k; i++)
+        cout<<arr[i]<<" ";
 
-
+    if(k==0)
+        cout<<"\nNo Common Elements Found";
     return 0;
+
 }
