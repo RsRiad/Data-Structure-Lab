@@ -90,7 +90,7 @@ void DeleteAtAnyPosition(int n)
 void DeleteHead()
 {
     Node* temp=head;
-    head->next=head;
+    head=head->next;
     delete temp;
 }
 
