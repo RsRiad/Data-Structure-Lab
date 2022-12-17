@@ -244,22 +244,16 @@ int main()
     insertAttail(6);
     insertAttail(11);
     insertAttail(4);
-    cout<<"DLL Before Sort : ";
     show();
     sortLinkedList();
-    cout<<"DLL After  Sort : ";
     show();
     deleteAtmid();
-    cout<<"DLL Mid Delete  : ";
     show();
     deleteAttail();
-    cout<<"DLL Tail Delete : ";
     show();
     deleteAtfront();
-    cout<<"DLL Front Delete: ";
     show();
     deleteByValue(6);
-    cout<<"DLL After_value Delete: ";
     show();
 
 
